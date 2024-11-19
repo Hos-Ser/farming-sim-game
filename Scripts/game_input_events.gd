@@ -24,3 +24,6 @@ static func is_moving() -> bool:
 		return false
 	else:
 		return true
+		
+static func is_use_tool() -> bool:
+	return Input.is_action_just_pressed("hit")

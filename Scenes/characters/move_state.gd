@@ -4,7 +4,6 @@ extends NodeState
 @export var animated_sprite_2d: AnimatedSprite2D
 
 var speed := 30
-
 var direction: Vector2
 
 func _on_process(_delta : float) -> void:
@@ -25,7 +24,10 @@ func _on_physics_process(_delta : float) -> void:
 
 	if direction != Vector2.ZERO:
 		player.last_direction = direction
-
+	
+	if GameInputEvents.is_use_tool():
+		return
+	
 	player.velocity = direction * speed
 	player.move_and_slide()
 	
@@ -33,7 +35,12 @@ func _on_physics_process(_delta : float) -> void:
 func _on_next_transitions() -> void:
 	if !GameInputEvents.is_moving():
 		transition.emit("Idle")
-
+		
+	if GameInputEvents.is_use_tool():
+		match player.current_tool:
+			PlayerActionType.Actions.AxeWood: transition.emit("Chopping")
+			PlayerActionType.Actions.WaterCrop: transition.emit("Watering")
+			PlayerActionType.Actions.TillGround: transition.emit("Tilling")
 
 func _on_enter() -> void:
 	pass
