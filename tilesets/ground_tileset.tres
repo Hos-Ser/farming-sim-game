@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cblj2bdg7pa6t"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cblj2bdg7pa6t"]
 
-[ext_resource type="Texture2D" uid="uid://2ch7k5cti6b6" path="res://Assets/Tilesets/Water.png" id="1_ayqgx"]
-[ext_resource type="Texture2D" uid="uid://fgn1pxum1r8b" path="res://Assets/Tilesets/Grass.png" id="2_qacff"]
-[ext_resource type="Texture2D" uid="uid://ca8hjpyu2a8e7" path="res://Assets/Tilesets/Tilled_Dirt_Wide.png" id="3_xjvko"]
+[ext_resource type="Texture2D" uid="uid://2ch7k5cti6b6" path="res://assets/tilesets/Water.png" id="1_ayqgx"]
+[ext_resource type="Texture2D" uid="uid://fgn1pxum1r8b" path="res://assets/tilesets/Grass.png" id="2_qacff"]
+[ext_resource type="Texture2D" uid="uid://ca8hjpyu2a8e7" path="res://assets/tilesets/Tilled_Dirt_Wide.png" id="3_xjvko"]
+[ext_resource type="PackedScene" uid="uid://dflqp5rwpyevh" path="res://scenes/housing/door.tscn" id="4_it3ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_geaax"]
 texture = ExtResource("1_ayqgx")
@@ -443,6 +444,9 @@ texture = ExtResource("3_xjvko")
 1:2/0/terrains_peering_bit/top_side = 1
 1:2/0/terrains_peering_bit/top_right_corner = 1
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8ktew"]
+scenes/1/scene = ExtResource("4_it3ey")
+
 [resource]
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
@@ -452,3 +456,4 @@ terrain_set_0/terrain_1/color = Color(0.501961, 0.439216, 0.972549, 1)
 sources/0 = SubResource("TileSetAtlasSource_geaax")
 sources/1 = SubResource("TileSetAtlasSource_ssehn")
 sources/2 = SubResource("TileSetAtlasSource_5oo5q")
+sources/3 = SubResource("TileSetScenesCollectionSource_8ktew")

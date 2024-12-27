@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://cabjrwaa5ile3"]
 
-[ext_resource type="TileSet" uid="uid://cblj2bdg7pa6t" path="res://Tilesets/ground_test.tres" id="1_8h6w1"]
-[ext_resource type="Texture2D" uid="uid://wjdofs6i7goc" path="res://Assets/Objects/Basic_Grass_Biom_things.png" id="2_n13c0"]
+[ext_resource type="TileSet" uid="uid://cblj2bdg7pa6t" path="res://tilesets/ground_tileset.tres" id="1_8h6w1"]
+[ext_resource type="Texture2D" uid="uid://wjdofs6i7goc" path="res://assets/objects/Basic_Grass_Biom_things.png" id="2_n13c0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnlmb"]
 texture = ExtResource("2_n13c0")

@@ -13,7 +13,7 @@ func _ready() -> void:
 			node_states[child.name.to_lower()] = child
 			child.transition.connect(transition_to)
 	
-	if initial_node_state:
+	if initial_node_state: 
 		initial_node_state._on_enter()
 		current_node_state = initial_node_state
 
@@ -45,4 +45,3 @@ func transition_to(node_state_name : String) -> void:
 	
 	current_node_state = new_node_state
 	current_node_state_name = current_node_state.name.to_lower()
-	print("Current State: ", current_node_state_name)
