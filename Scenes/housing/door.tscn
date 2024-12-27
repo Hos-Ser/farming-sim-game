@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dflqp5rwpyevh"]
 
-[ext_resource type="Script" path="res://scripts/door.gd" id="1_pg06t"]
+[ext_resource type="Script" path="res://scripts/objects/door.gd" id="1_pg06t"]
 [ext_resource type="Texture2D" uid="uid://dlr7rhrj6anml" path="res://assets/tilesets/Doors.png" id="2_pixir"]
 [ext_resource type="PackedScene" uid="uid://cp5hld0fmn243" path="res://scenes/components/player_interactable.tscn" id="3_2kxwd"]
 
