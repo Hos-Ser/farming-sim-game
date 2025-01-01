@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=4 uid="uid://b2xgjmuijqndk"]
+[gd_scene load_steps=5 format=4 uid="uid://b2xgjmuijqndk"]
 
 [ext_resource type="TileSet" uid="uid://cblj2bdg7pa6t" path="res://tilesets/ground_tileset.tres" id="1_xjf0i"]
 [ext_resource type="PackedScene" uid="uid://cdv8wluw2hyl" path="res://scenes/objects/trees/small_tree.tscn" id="2_4knlj"]
+[ext_resource type="PackedScene" uid="uid://r223hn7g7ig6" path="res://scenes/objects/trees/big_tree.tscn" id="3_c6xkc"]
 [ext_resource type="PackedScene" uid="uid://crc0pgi2evc4a" path="res://scenes/characters/player.tscn" id="3_xmvp4"]
 
 [node name="DefaultTestScene" type="Node2D"]
@@ -29,6 +30,12 @@ position = Vector2(107, 92)
 
 [node name="SmallTree4" parent="Objects" instance=ExtResource("2_4knlj")]
 position = Vector2(220, 118)
+
+[node name="BigTree" parent="Objects" instance=ExtResource("3_c6xkc")]
+position = Vector2(116, 194)
+
+[node name="BigTree2" parent="Objects" instance=ExtResource("3_c6xkc")]
+position = Vector2(220, 182)
 
 [node name="Player" parent="." instance=ExtResource("3_xmvp4")]
 position = Vector2(165, 221)

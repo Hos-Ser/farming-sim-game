@@ -65,6 +65,7 @@ hit={
 
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="Object"
+2d_physics/layer_3="Collectable"
 2d_physics/layer_6="Tool"
 2d_physics/layer_7="Interactable"
 2d_physics/layer_8="Player"

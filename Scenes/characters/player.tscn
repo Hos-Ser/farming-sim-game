@@ -398,7 +398,7 @@ animations = [{
 radius = 4.12311
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxbkv"]
-size = Vector2(12, 12)
+size = Vector2(10, 9.99996)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 9
@@ -456,4 +456,5 @@ current_tool = 1
 position = Vector2(0, -18)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_pxbkv")
+disabled = true
 debug_color = Color(0.989781, 0, 0.286363, 0.42)
