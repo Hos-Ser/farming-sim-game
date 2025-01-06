@@ -12,7 +12,7 @@ region_enabled = true
 region_rect = Rect2(80, 32, 16, 16)
 
 [node name="CollectableComponent" parent="." instance=ExtResource("2_x1baa")]
-collectable_name = "Log"
+collectable_name = "log"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
 shape = SubResource("RectangleShape2D_asql4")
