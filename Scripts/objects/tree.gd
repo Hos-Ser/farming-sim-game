@@ -10,13 +10,13 @@ func _ready() -> void:
 	damage_component.max_damage_reached.connect(on_max_damage_reached)
 
 func hurting(damage: int) -> void:
-	print("dmged")
 	damage_component.apply_damage(damage)
-
+	material.set_shader_parameter("shake_intensity", 0.6)
+	await get_tree().create_timer(1.0).timeout
+	material.set_shader_parameter("shake_intensity", 0.0)
 
 func on_max_damage_reached() -> void:
 	call_deferred("add_log_scene")
-	print("max dmg reached")
 	queue_free()
 
 func add_log_scene() -> void:

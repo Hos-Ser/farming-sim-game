@@ -14,14 +14,17 @@ config/name="Farming Sim"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*res://scripts/globals/tool_manager.gd"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
-window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [file_customization]
@@ -60,11 +63,18 @@ hit={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(262, 14),"global_position":Vector2(271, 60),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+release_tool={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(312, 3),"global_position":Vector2(321, 49),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [layer_names]
 
 2d_physics/layer_1="Ground"
+2d_navigation/layer_1="Chicken Nav"
 2d_physics/layer_2="Object"
+2d_navigation/layer_2="Cow Nav"
 2d_physics/layer_3="Collectable"
 2d_physics/layer_6="Tool"
 2d_physics/layer_7="Interactable"
@@ -73,3 +83,4 @@ hit={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true

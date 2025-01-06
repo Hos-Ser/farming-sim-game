@@ -3,7 +3,7 @@ extends NodeState
 @export var player: PlayerClass
 @export var animated_sprite_2d: AnimatedSprite2D
 
-var speed := 30
+var speed := 60
 var direction: Vector2
 
 func _on_process(_delta : float) -> void:

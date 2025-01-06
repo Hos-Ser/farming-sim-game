@@ -6,8 +6,11 @@ extends Node
 var node_states : Dictionary = {}
 var current_node_state : NodeState
 var current_node_state_name : String
+var parent_node_name: String
 
 func _ready() -> void:
+	parent_node_name = get_parent().name
+	
 	for child in get_children():
 		if child is NodeState:
 			node_states[child.name.to_lower()] = child
