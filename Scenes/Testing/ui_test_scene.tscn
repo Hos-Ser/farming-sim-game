@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=4 uid="uid://bk4xvtjr4jfue"]
+[gd_scene load_steps=6 format=4 uid="uid://bk4xvtjr4jfue"]
 
+[ext_resource type="PackedScene" uid="uid://cspnv5vui17no" path="res://scenes/components/day_and_night_cycle_component.tscn" id="1_lo5hs"]
 [ext_resource type="TileSet" uid="uid://cblj2bdg7pa6t" path="res://tilesets/ground_tileset.tres" id="1_shsux"]
 [ext_resource type="PackedScene" uid="uid://crc0pgi2evc4a" path="res://scenes/characters/player.tscn" id="2_b0sji"]
 [ext_resource type="PackedScene" uid="uid://ciuqnb6ex8xkq" path="res://scenes/ui/game_screen.tscn" id="3_7kr40"]
+[ext_resource type="PackedScene" uid="uid://yhkw3v0gnnml" path="res://scenes/objects/plants/corn.tscn" id="5_jnugf"]
 
 [node name="PlayerTestScene" type="Node2D"]
+
+[node name="DayAndNightCycleComponent" parent="." instance=ExtResource("1_lo5hs")]
+visible = false
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -20,3 +25,9 @@ tile_set = ExtResource("1_shsux")
 position = Vector2(157, 180)
 
 [node name="GameScreen" parent="." instance=ExtResource("3_7kr40")]
+
+[node name="Corn" parent="." instance=ExtResource("5_jnugf")]
+position = Vector2(221, 158)
+
+[node name="Corn2" parent="." instance=ExtResource("5_jnugf")]
+position = Vector2(246, 157)
